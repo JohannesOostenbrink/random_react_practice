@@ -10,10 +10,14 @@
 //TO have console.log update immediately, one can do a function with a call back 
 //That look may look like this example in class components 
 
-onClick = {() => {
-    this.setState(()=>{return{
-        name: {'john'}
-}})
-}, () => {console.log(this.state)}}
+onClick = {(state) => {
+             this.setState(()=>{return{
+                 name: {'john'}
+             }
+        }
+    )
+}, 
+
+() => {console.log(this.state)}}
 
 //This is the preferred way of writing setState in class Components 
